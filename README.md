@@ -1,5 +1,5 @@
 
-# Unity-Gradient-Maker
+# [Unity-Gradient-Maker](https://kanatimc.github.io/Unity-Gradient-Maker/)
 A Gradient Maker For Unity Rich Text Or HTML
 
 Credit to [David](https://www.stuffbydavid.com/)
