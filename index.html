@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Unity Rich Text & HTML Gradient Generator</title>
+        <meta name="description" content="Gradient Generator For Unity Rich Text And HTML" />
+        <style type="text/css">
+            #div_content {
+                padding:20px;
+                margin:0 auto;
+                position:relative;
+                width:760px;
+                -webkit-border-radius:15px;
+                -moz-border-radius:15px;
+                border-radius:15px;
+                top:50px;
+                border:2px solid black;
+                background-color:white;
+            }
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            img#bg {
+                position:fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                z-index:-100;
+            }
+            body {
+                font-family:Verdana;
+                font-size:13px;
+            }
+            a:link {color:#000000;}
+            a:visited {color:#333333;}
+            a:hover {color:#BBBBBB;}
+            #div_footer {
+                padding:10px 10px;
+                height:5px;
+                width:760px;
+                text-align:center;
+                font-size:10px;
+                color:#444444;
+            }
+            #div_logo {
+                margin:0 auto;
+                width:760px;
+                height:40px;
+                text-align:center;
+                position:relative;
+            }
+        </style>
+        <script src="stuff/textcolorizer/textcolorizer.js"></script>
+        <script src="js/jscolor/jscolor.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/visit.js"></script>
+    </head>
+    <body>
+        <img src="stuff/textcolorizer/gradient.png" id="bg" />
+        <div id="div_logo" style="z-index:-100">
+            <span style="position:absolute; font-size:10px; top:18px; left:250px;">Rich Text & HTML
+            <br/><span style='font-family:"Verdana";font-size:35px;'><span style='color:#FF0000;'>T</span><span style='color:#FF6D00;'>e</span><span style='color:#FFDA00;'>x</span><span style='color:#B6FF00;'>t</span> <span style='color:#00FF24;'>C</span><span style='color:#00FF91;'>o</span><span style='color:#00FEFF;'>l</span><span style='color:#0091FF;'>o</span><span style='color:#0024FF;'>r</span><span style='color:#4800FF;'>i</span><span style='color:#B600FF;'>z</span><span style='color:#FF00DA;'>e</span><span style='color:#FF006D;'>r</span></span></span>
+        </div>
+        <div id="div_content">
+            <span style="font-weight:bold;">Step 1:</span> Enter Text:<br/><br/>
+            <textarea id="input_text" rows="5" cols="50">Hello World!</textarea>
+            <br/><br/><span style="font-weight:bold;">Step 2:</span> Choose the color effect:<br/><br/>
+            <select id="input_effect">
+                <option value="1">Horizontal Gradient</option>
+                <option value="2">Middle Gradient</option>
+                <option value="3">Three Colored gradient</option>
+                <option value="4">Solid Color</option>
+                <option value="5">Random Colors</option>
+                <option value="6">Gaybow</option>
+            </select>
+            <br/><br/><span style="font-weight:bold;">Step 3:</span> Choose the colors:<br/><br/>
+            <div style="position:relative;">
+                <div id="color_select1" style="position:absolute; visibility:visible">Start color: <input type="color" id="input_color1" class='color {hash:true,caps:true}' value='#FF0000'><br/>End color: <input type="color" id="input_color2" class='color {hash:true,caps:true}' value='#0000FF'></div>
+                <div type="color" id="color_select2" style="position:absolute; visibility:hidden">Start & End color: <input type="color" id="input_color3" class='color {hash:true,caps:true}' value='#FF0000'><br/>Middle color: <input type="color" id="input_color4" class='color {hash:true,caps:true}' value='#0000FF'></div>
+                <div id="color_select3" style="position:absolute; visibility:hidden">Start color: <input type="color" id="input_color5" class='color {hash:true,caps:true}' value='#FF0000'><br/>Middle color: <input type="color" id="input_color6" class='color {hash:true,caps:true}' value='#0000FF'><br/>End color: <input type="color" id="input_color7" class='color {hash:true,caps:true}' value='#00FF00'></div>
+                <div id="color_select4" style="position:absolute; visibility:hidden">Color: <input type="color" id="input_color8" class='color {hash:true,caps:true}' value='#FF0000'></div>
+                <div id="color_select5" style="position:absolute; visibility:hidden"><input type="button" value="Randomize!" onClick="randomize_colors()"><br/>Word-by-word:<input type="checkbox" id="input_colorword"/></div>
+                <div id="color_select6" style="position:absolute; visibility:hidden">Rainbow</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/>
+            <span style="font-weight:bold;">Step 4:</span> Additional text settings:<br/><br/>
+            Font:
+            <select id="input_font">
+                <option value="">Default</option>
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="Arial Narrow">Arial Narrow</option>
+                <option value="Book Antiqua">Book Antiqua</option>
+                <option value="Century Gothic">Century Gothic</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Impact">Impact</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                <option value="Microsoft Sans Serif">Microsoft Sans Serif</option>
+                <option value="Palatino Linotype">Palatino Linotype</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Verdana">Verdana</option>
+            </select><br/>
+            Size:
+            <select id="input_size">
+                <option value="0">Default</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select><br/>
+            Bold:<input type="checkbox" id="input_bold"/><br/>
+            Italic:<input type="checkbox" id="input_italic"/>
+            <br/><br/>
+            <span style="font-weight:bold;">Step 5:</span> Preview And Code Options:<br/><br/>
+            <div id="div_preview"></div><br/><br/>
+            Unity Rich Text For This Text: (Can Be Used On Unity Games)<br/>
+            <textarea id="output_richtext" rows="5" cols="80" readonly="true"></textarea><br/><br/>
+            HTML Code For This Text: (To Use On Your Website)<br/>
+            <textarea id="output_html" rows="5" cols="80" readonly="true"></textarea>
+            <script type="text/javascript">textcolorizer_handle();</script><br/><br/>
+            <span style="font-weight:bold;">Step 6:</span> Done! Have a nice day &#9786;<br/><br/>
+            <br><div id="div_footer">Originally Created By David, Modified By Kanati.</br><a href="textcolorizer/source.html">View Original Souce Code</a></div>
+        </div>
+        <br/><br/><br/><br/><br/><br/>
+    
+</html><script type='text/javascript'>registerVisit(19);</script>
