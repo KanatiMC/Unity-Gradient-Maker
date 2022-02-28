@@ -2,7 +2,8 @@
 # [Unity-Gradient-Maker](https://kanatimc.github.io/Unity-Gradient-Maker/)
 A Gradient Maker For Unity Rich Text Or HTML
 
-Credit to [David](https://www.stuffbydavid.com/)
+## Credits:
+Credit to [David](https://github.com/stuffbydavid)
 
 
 ## How To Use:
@@ -11,7 +12,7 @@ Credit to [David](https://www.stuffbydavid.com/)
 3. Click into the bottom text box of the contents you need, HTML or Unity Rich Text, then press ``Ctrl + A`` to select all contents, then ``Ctrl + C`` top copy it. When needing to paste, simply do ``Ctrl + V``
 4. Enjoy
 
-## Issue Template
+## Issue Template:
 `Issue: `
 
 `Can You Replicate The Issue: `
