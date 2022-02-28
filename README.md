@@ -2,6 +2,8 @@
 # [Unity-Gradient-Maker](https://kanatimc.github.io/Unity-Gradient-Maker/)
 A Gradient Maker For Unity Rich Text Or HTML
 
+<img src="https://img.shields.io/github/downloads/KanatiMC/Unity-Gradient-Maker/total" alt="dwnlds" />
+
 ## Credits:
 Credit to [David](https://github.com/stuffbydavid)
 
