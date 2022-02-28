@@ -3,23 +3,25 @@
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Unity Rich Text & HTML Gradient Generator</title>
-        <meta name="description" content="Gradient Generator For Unity Rich Text And HTML" />
+        <meta name="description" content="Gradient Generator For Unity Rich Text, HTML, And BBCode" />
         <link rel="stylesheet" href="./style.css">
+        <!--How To Inset An Image
+        <img src={directory} alt={name} height={params} width={params}>-->
         <script src="stuff/textcolorizer/textcolorizer.js"></script>
         <script src="js/jscolor/jscolor.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/visit.js"></script>
     </head>
     <body>
-        <img src="stuff/textcolorizer/gradient.png" id="bg" />
+        <img src="stuff/textcolorizer/gradient.png" id="bg"/>
         <div id="div_logo" style="z-index:-100">
-            <span style="position:absolute; font-size:10px; top:18px; left:250px;">Rich Text & HTML
+            <span style="position:absolute; font-size:10px; top:18px; left:250px;">Rich Text, HTML, And BBCode
             <br/><span style='font-family:"Verdana";font-size:35px;'><span style='color:#FF0000;'>T</span><span style='color:#FF6D00;'>e</span><span style='color:#FFDA00;'>x</span><span style='color:#B6FF00;'>t</span> <span style='color:#00FF24;'>C</span><span style='color:#00FF91;'>o</span><span style='color:#00FEFF;'>l</span><span style='color:#0091FF;'>o</span><span style='color:#0024FF;'>r</span><span style='color:#4800FF;'>i</span><span style='color:#B600FF;'>z</span><span style='color:#FF00DA;'>e</span><span style='color:#FF006D;'>r</span></span></span>
         </div>
         <div id="div_content">
-            <span style="font-weight:bold;">Enter Text:</span> <br/><br/>
+            <span style="font-weight:bold;">Enter Text:</span><br/><br/>
             <textarea id="input_text" rows="5" cols="50">Hello World!</textarea>
-            <br/><br/><span style="font-weight:bold;">Choose The Effect:</span><br/><br/>
+            <br/><br/><span style="font-weight:bold;">Choose Your Color Effect</span><br/><br/>
             <select id="input_effect">
                 <option value="1">Horizontal Gradient</option>
                 <option value="2">Middle Gradient</option>
@@ -28,7 +30,7 @@
                 <option value="5">Random Colors</option>
                 <option value="6">Gaybow</option>
             </select>
-            <br/><br/><span style="font-weight:bold;">Choose The Colors:</span><br/><br/>
+            <br/><br/><span style="font-weight:bold;">Choose The Color(s)</span><br/><br/>
             <div style="position:relative;">
                 <div id="color_select1" style="position:absolute; visibility:visible">Start Color: <input type="color" id="input_color1" class='color {hash:true,caps:true}' value='#FF0000'><br/>End Color: <input type="color" id="input_color2" class='color {hash:true,caps:true}' value='#0000FF'></div>
                 <div type="color" id="color_select2" style="position:absolute; visibility:hidden">Start & End Color: <input type="color" id="input_color3" class='color {hash:true,caps:true}' value='#FF0000'><br/>Middle Color: <input type="color" id="input_color4" class='color {hash:true,caps:true}' value='#0000FF'></div>
@@ -38,7 +40,7 @@
                 <div id="color_select6" style="position:absolute; visibility:hidden">Rainbow</div>
             </div>
             <br/><br/><br/><br/><br/><br/>
-            <span style="font-weight:bold;">Additional Settings:</span><br/><br/>
+            <span style="font-weight:bold;">Additional Text Settings:</span><br/><br/>
             Font:
             <select id="input_font">
                 <option value="">Default</option>
@@ -84,16 +86,16 @@
             Bold:<input type="checkbox" id="input_bold"/><br/>
             Italic:<input type="checkbox" id="input_italic"/>
             <br/><br/>
-            <span style="font-weight:bold;">Preview And Code Options</span><br/><br/>
+            <span style="font-weight:bold;">Preview And Code Options:</span><br/><br/>
             <div id="div_preview"></div><br/><br/>
             Unity Rich Text For This Text: (Can Be Used On Unity Games)<br/>
             <textarea id="output_richtext" rows="5" cols="80" readonly="true"></textarea><br/><br/>
             HTML Code For This Text: (To Use On Your Website)<br/>
-            <textarea id="output_html" rows="5" cols="80" readonly="true"></textarea>
-            <script type="text/javascript">textcolorizer_handle();</script><br/><br/>
-            <span style="font-weight:bold;">Step 6:</span> Done! Have a nice day &#9786;<br/><br/>
+            <textarea id="output_html" rows="5" cols="80" readonly="true"></textarea><br/><br/>
+           BBCode For This Text: (To Use On Forums)
+            <textarea id="output_bbcode" rows="5" cols="80" readonly="true"></textarea>
+            <script type="text/javascript">textcolorizer_handle();</script><br/><br/><br/><br/>
             <br><div id="div_footer">Originally Created By David, Modified By Kanati.</br><a href="textcolorizer/source.html">View Original Souce Code</a></div>
         </div>
         <br/><br/><br/><br/><br/><br/>
-    
 </html><script type='text/javascript'>registerVisit(19);</script>
