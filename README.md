@@ -20,3 +20,10 @@ Credit to [David](https://github.com/stuffbydavid)
 `Screenshot Of The Issue: `
 
 `Web Browser: `
+
+## How To Use Source Code:
+Download Latest Download From [Versions](https://github.com/KanatiMC/Unity-Gradient-Maker/releases)
+
+Extract The Downloaded Folder
+
+Open `index.html`
