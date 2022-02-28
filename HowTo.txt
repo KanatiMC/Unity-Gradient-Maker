@@ -1,0 +1,2 @@
+How To Import An Image
+<img src={directory} alt={name} height={params} width={params}>

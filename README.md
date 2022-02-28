@@ -10,3 +10,12 @@ Credit to [David](https://www.stuffbydavid.com/)
 2. Decide on any customizations you would like done to your text.
 3. Click into the bottom text box of the contents you need, HTML or Unity Rich Text, then press ``Ctrl + A`` to select all contents, then ``Ctrl + C`` top copy it. When needing to paste, simply do ``Ctrl + V``
 4. Enjoy
+
+## Issue Template
+`Issue: `
+
+`Can You Replicate The Issue: `
+
+`Screenshot Of The Issue: `
+
+`Web Browser: `

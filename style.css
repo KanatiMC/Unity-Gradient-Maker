@@ -9,11 +9,8 @@
                 top:50px;
                 border:2px solid black;
                 /*Background Color Is Color For The Box*/
-                background-color: #fff;
-                
-            }
-
-          
+                background-color: #fff;      
+ }
             html, body {
                 height: 100%;
                 margin: 0;
