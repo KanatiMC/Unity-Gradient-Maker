@@ -104,8 +104,8 @@ function textcolorizer_handle() {
         if (input_bold==1) {str_style+="font-weight:bold;"; str_richtext+="<b>"; str_richtextend="</b>"+str_richtextend;}
         if (input_italic==1) {str_style+="font-style:italic;"; str_richtext+="<i>"; str_richtextend="</i>"+str_richtextend;}
 
-      if (input_bold==1) {str_style+="font-weight:bold;"; str_bbcode+="<b>"; str_bbcodeend="</b>"+str_bbcodeend;}
-        if (input_italic==1) {str_style+="font-style:italic;"; str_bbcode+="<i>"; str_bbcodeend="</i>"+str_bbcodeend;}
+      if (input_bold==1) {str_style+="font-weight:bold;"; str_bbcode+="[b]"; str_bbcodeend="[/b]"+str_bbcodeend;}
+        if (input_italic==1) {str_style+="font-style:italic;"; str_bbcode+="[i]"; str_bbcodeend="[/i]"+str_bbcodeend;}
         if (input_font!="") {str_style+='font-family:"'+input_font+'";'; str_bbcode+='[font="'+input_font+']'; str_bbcodeend="[/font]"+str_bbcodeend;}
         if (input_size!="0") {
             var str_size;
@@ -118,6 +118,7 @@ function textcolorizer_handle() {
             if (input_size=="6") str_size="27px"
             if (input_size=="7") str_size="35px"
             str_style+='font-size:'+str_size+';';
+            
             str_richtext+='<size='+input_size+'>';
             str_richtextend="</size>"+str_richtextend;
             str_bbcode+='[size='+input_size+']';
