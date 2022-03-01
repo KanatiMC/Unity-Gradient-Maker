@@ -1,6 +1,3 @@
-// Text Colorizer by David at stuffbydavid.com, 2011
-// Really old code ahead!
-
 function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
 function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
 function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
@@ -106,10 +103,10 @@ function textcolorizer_handle() {
         str_style="";
         if (input_bold==1) {str_style+="font-weight:bold;"; str_richtext+="<b>"; str_richtextend="</b>"+str_richtextend;}
         if (input_italic==1) {str_style+="font-style:italic;"; str_richtext+="<i>"; str_richtextend="</i>"+str_richtextend;}
-        if (input_font!="") {str_style+='font-family:"'+input_font+'";'; str_richtext+='<font="'+input_font+'">'; str_richtextend="</font>"+str_richtextend;}
+
       if (input_bold==1) {str_style+="font-weight:bold;"; str_bbcode+="<b>"; str_bbcodeend="</b>"+str_bbcodeend;}
         if (input_italic==1) {str_style+="font-style:italic;"; str_bbcode+="<i>"; str_bbcodeend="</i>"+str_bbcodeend;}
-        if (input_font!="") {str_style+='font-family:"'+input_font+'";'; str_bbcode+='<font="'+input_font+'">'; str_bbcodeend="</font>"+str_bbcodeend;}
+        if (input_font!="") {str_style+='font-family:"'+input_font+'";'; str_bbcode+='[font="'+input_font+']'; str_bbcodeend="[/font]"+str_bbcodeend;}
         if (input_size!="0") {
             var str_size;
             str_size=""
