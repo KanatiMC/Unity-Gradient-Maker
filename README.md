@@ -24,8 +24,10 @@ Credit to [David](https://github.com/stuffbydavid)
 `Web Browser: `
 
 ## How To Use Source Code:
-Download Latest Download From [Versions](https://github.com/KanatiMC/Unity-Gradient-Maker/releases)
+Click File
 
-Extract The Downloaded Folder
+Click Download As .zip
+
+Extract The Downloaded Folder After It's Finished Downloading
 
 Open `index.html`
