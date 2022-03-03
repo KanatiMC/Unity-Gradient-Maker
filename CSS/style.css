@@ -45,7 +45,8 @@
                 position:relative;
             }
 .bg {
-    background: linear-gradient(-45deg, #ff6961, #77dd77, #A7C7E7, #C3B1E1);
+
+    background: -webkit-radial-gradient(center, ellipse cover, #ff6961, #77dd77, #A7C7E7, #C3B1E1);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
