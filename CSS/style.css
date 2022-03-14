@@ -1,18 +1,22 @@
 #div_content {
                 
-                padding:20px;
-                margin:0 auto;
-                position:relative;
-                width:760px;
-                -webkit-border-radius:15px;
-                -moz-border-radius:15px;
-                border-radius:15px;
-                top:50px;
-                border:2px solid black;
-                /*Background Color Is Color For The Box*/
-                background-color: #fff;   
+  padding:20px;
+  margin:0 auto;
+  position:relative;
+  width:760px;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  border-radius:15px;
+  top:50px;
+  border:2px solid black;
+  /*Background Color Is Color For The Box*/
+  background-color: #fff;
+  transition: background 1s ease-out;  
                 
  }
+#div_content:Hover{
+  background-color: #d1d1d1;
+}
             html, body {
                 height: 100%;
                 margin: 0;
