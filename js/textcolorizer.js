@@ -119,7 +119,7 @@ function textcolorizer_handle() {
             if (input_size=="7") str_size="35px"
             str_style+='font-size:'+str_size+';';
             
-            str_richtext+='<size='+input_size+'>';
+            str_richtext+='<size='+input_size * 6 +'>';
             str_richtextend="</size>"+str_richtextend;
             str_bbcode+='[size='+input_size+']';
             str_bbcodeend="[/size]"+str_bbcode
