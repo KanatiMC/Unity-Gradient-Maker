@@ -4,7 +4,7 @@ A Gradient Maker For Unity Rich Text Or HTML
 
 
 ## Credits:
-Credit to [David](https://github.com/stuffbydavid)
+Credit to [David](https://github.com/stuffbydavid) - Created Original Website
 
 
 ## How To Use:
